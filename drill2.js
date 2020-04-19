@@ -25,11 +25,18 @@ function main() {
 
   console.log(arr);
 
+  // print 1st item of array
   console.log(arr.get(0));
-  arr.length = 0
+
+  // empties array
+  arr.pop();
+  arr.pop();
+
+  // push new item
   arr.push("tauhida");
-  console.log(arr.get(0, 1));
+  console.log(arr.get(0));
 
 }
+
 
 console.log(main());
