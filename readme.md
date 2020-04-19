@@ -1,4 +1,4 @@
-# Assignment Answers 
+# Assignment Answers drill 1-4
 
 ## 1
 Array.js
@@ -18,4 +18,3 @@ length is reduced by 3 due to removing the last 3 indexs of the array
 NaN ????
 allocates memory for new values into an array 
 
-## 5
