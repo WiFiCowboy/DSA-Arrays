@@ -126,11 +126,11 @@ function array2d(arr) {
   return arr
 }
 
-// console.log(array2d([[1, 0, 1, 1, 0],
-// [0, 1, 1, 1, 0],
-// [1, 1, 1, 1, 1],
-// [1, 0, 1, 1, 1],
-// [1, 1, 1, 1, 1]]));
+console.log(array2d([[1, 0, 1, 1, 0],
+[0, 1, 1, 1, 0],
+[1, 1, 1, 1, 1],
+[1, 0, 1, 1, 1],
+[1, 1, 1, 1, 1]]));
 
 // 12. String rotation
 // Given 2 strings, str1 and str2, write a program that checks if str2 is a rotation of str1.
