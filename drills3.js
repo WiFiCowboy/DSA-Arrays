@@ -87,3 +87,79 @@ removeChar(originalStr);
 
 // Input:[1, 3, 9, 4]
 // Output:[108, 36, 12, 27]
+
+function products(int) {
+  let total = 1
+  for (let i = 0; i < int.length; i++) {
+    total = total * int[i]
+  }
+  const result = []
+  for (let j = 0; j < int.length; j++) {
+    result.push(total / int[j])
+  }
+  return result
+}
+
+// console.log(products([1, 3, 9, 4]));
+
+// 11. 2D array
+// Write an algorithm which searches through a 2D array, and whenever it finds a 0 should set the entire row and column to 0.
+
+function array2d(arr) {
+  let row = [1, 1, 1, 1, 1]
+  let column = [1, 1, 1, 1, 1]
+  for (let r = 0; r < row.length; r++) {
+    for (let c = 0; c < column.length; c++) {
+      if (arr[r][c] === 0) {
+        row[r] = 0
+        column[c] = 0
+      }
+    }
+  }
+  for (let r = 0; r < row.length; r++) {
+    for (let c = 0; c < column.length; c++) {
+      if (row[r] === 0 || column[c] === 0) {
+        arr[r][c] = 0
+      }
+    }
+  }
+  return arr
+}
+
+// console.log(array2d([[1, 0, 1, 1, 0],
+// [0, 1, 1, 1, 0],
+// [1, 1, 1, 1, 1],
+// [1, 0, 1, 1, 1],
+// [1, 1, 1, 1, 1]]));
+
+// 12. String rotation
+// Given 2 strings, str1 and str2, write a program that checks if str2 is a rotation of str1.
+
+// Input: amazon, azonma
+
+// Output: False
+
+// Input: amazon, azonam
+
+// Output: true
+
+function strRot(str1, str2) {
+  for (let i = 0; i < str2.length; i++) {
+    str2 = str2.slice(1) + str2[0];
+    // does string match any part of a rotation 
+    if (str1 === str2) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// console.log(strRot('amazon', 'azonam'));
+// one rotation 
+// amazon 
+// mazona
+// azonam
+// zonama
+// onamaz
+// namazo
+// amazon
